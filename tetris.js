@@ -1,6 +1,8 @@
 import BLOCKS from "./blocks.js"
 
 
+const mainMenu = document.querySelector(".main-menu");
+const singlePlayButton = document.querySelector(".main-menu > button");
 const playGround = document.querySelector(".playground > ul");
 const gameText = document.querySelector(".game-text");
 const scoreDisplay = document.querySelector(".score");
@@ -186,6 +188,17 @@ restartButton.addEventListener("click", () => {
     playGround.innerHTML = '';
     gameText.style.display = "none";
     init();
+});
+
+singlePlayButton.addEventListener("click", () => {
+    playGround.innerHTML = '';
+    mainMenu.style.display = "none";
+    init();
 })
 
-init();
+
+function main() {
+    mainMenu.style.display = "flex";
+}
+
+main();
